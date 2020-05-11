@@ -1,0 +1,24 @@
+{
+  "name": "products-demo-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prisma:update": "prisma generate",
+    "prisma:studio": "prisma studio --experimental",
+    "prisma:save": "prisma migrate save --experimental",
+    "prisma:up": "prisma migrate up --experimental",
+    "prisma:all": "npm run prisma:save && npm run prisma:up && npm run prisma:update",
+    "postinstall": "npm run prisma:update",
+    "dev": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "@prisma/cli": "2.0.0-beta.4",
+    "apollo-server": "^2.13.0",
+    "graphql": "^15.0.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "2.0.0-beta.4",
+    "nodemon": "^2.0.3"
+  }
+}
