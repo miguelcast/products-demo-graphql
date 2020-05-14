@@ -1,9 +1,18 @@
-const { PrismaClient } = require('@prisma/client')
+const jwt = require('jwt-simple');
+const { PrismaClient } = require('@prisma/client');
 
-const prisma = new PrismaClient()
+const { SECRET_JWT } = require('./config/constanst');
 
-function createContext() {
-  return { prisma }
+const prisma = new PrismaClient();
+
+function getUser(token) {
+  return jwt.decode(token, SECRET_JWT);
+}
+
+function createContext({ req }) {
+  const token = req.headers.authorization || null;
+  const user = token ? getUser(token) : null;
+  return { prisma, user }
 }
 
 module.exports = {
