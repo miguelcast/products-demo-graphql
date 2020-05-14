@@ -12,7 +12,7 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!): Login
         upsertUser(id: ID, name: String, email: String, role: Role): User
-        upsertProduct(id: ID, name: String, image: String, description: String): Product
+        upsertProduct(id: ID, name: String, image: String, description: String, price: Int): Product
     }
 
     enum Role {
@@ -37,6 +37,7 @@ const typeDefs = gql`
         name: String!
         image: String!
         description: String!
+        price: Int!
     }
 `;
 
