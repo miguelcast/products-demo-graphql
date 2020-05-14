@@ -7,7 +7,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "prisma:update": "npx prisma generate",
+    "prisma:update": "prisma generate",
     "prisma:studio": "prisma studio --experimental",
     "prisma:save": "prisma migrate save --experimental",
     "prisma:up": "prisma migrate up --experimental",
