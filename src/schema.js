@@ -43,7 +43,6 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     users(parent, args, { prisma, user }) {
-      console.log('**********', user);
       return prisma.user.findMany();
     },
     products(parent, args, { prisma }) {
