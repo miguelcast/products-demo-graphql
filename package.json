@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "prisma:update": "prisma generate",
     "prisma:studio": "prisma studio --experimental",
@@ -15,12 +18,12 @@
   },
   "dependencies": {
     "@prisma/cli": "2.0.0-beta.4",
+    "@prisma/client": "2.0.0-beta.4",
     "apollo-server": "^2.13.0",
     "graphql": "^15.0.0",
     "jwt-simple": "^0.5.6"
   },
   "devDependencies": {
-    "@prisma/client": "2.0.0-beta.4",
     "nodemon": "^2.0.3"
   }
 }
