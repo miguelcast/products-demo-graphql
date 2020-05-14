@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require('apollo-server-express');
 const jwt = require('jwt-simple');
 
 const { SECRET_JWT } = require('./config/constanst');
