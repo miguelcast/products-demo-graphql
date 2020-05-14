@@ -5,7 +5,7 @@ const { resolvers, typeDefs } = require('./schema');
 const { createContext } = require('./context');
 
 const server = new ApolloServer({
-  typeDefs, resolvers, context: createContext
+  typeDefs, resolvers, context: createContext, playground: true
 });
 
 const app = express();
